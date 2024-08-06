@@ -30,5 +30,22 @@ for (let [key, value] of Object.entries(person)) {
 }
 console.log(text);
 
+function bikeDetails(name, cc, price, cylinder) {
+    this.Name = name;
+    this.CC = cc;
+    this.Price = price;
+    this.Cylinder = cylinder;
+  }
+const RE = new bikeDetails("Royal Enfild", 350, 50, "Single");
+
+let RE_Arr = Object.entries(RE)
+console.log(RE_Arr);
+
+/* What is "this"?
+In an object method, this refers to the object.
+Alone and in a function this refers to the global object.
+In a function, in strict mode, this is undefined.
+In an event, this refers to the element that received the event.
+*/
 
 
