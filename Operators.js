@@ -46,6 +46,14 @@ function bin2dec(bina){
 let binaryTodecimal = bin2dec(decilamTobinary)
 console.log(binaryTodecimal)
 
+//Nullish coalescing assignment operator:
+// If the 1st value is undefined then 2nd value will be assigned.
+let x;
+x ??= 5
+let y = 2;
+y ??= 23
+console.log(`X = ${x} and Y = ${y}`)
+
 
 
 
