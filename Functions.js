@@ -60,3 +60,46 @@ console.log(`The sum of 6 and 3 is ${Calculator(6,3,sum)}`)
 console.log(`The sum of 6 and 3 is ${Calculator(6,3,sub)}`)
 console.log(`The sum of 6 and 3 is ${Calculator(6,3,mul)}`)
 console.log(`The sum of 6 and 3 is ${Calculator(6,3,div)}`)
+
+// Promises:
+
+let test_promise = new Promise((res,rej)=>{
+    console.log("If the message doesn't resolve in 5 sec then it will be rejected.")
+    setTimeout(() => {
+      res("This is resolved")
+    }, 10000)
+    
+    setTimeout(() => {
+      rej("This is rejected.")
+    }, 5000)
+    
+})
+
+let test_promise_1 = new Promise((res_1,rej_1)=>{
+    setTimeout(() => {
+      res_1("2.5 second completed")
+    }, 2500)
+    
+})
+
+test_promise.then((res) => {
+    console.log(res)
+}).catch((rej)=>{
+    console.log(rej)
+})
+
+test_promise_1.then((res)=>{
+    console.log(res)
+})
+
+// Two promises runs paralally. However we will not create the promises like this.
+// We will create async funtions to call promise.
+
+let test1 = async () => {
+    return "Ratul Pal: I am from async function"
+}
+
+test1().then((r)=>{
+    console.log(r)
+})
+
