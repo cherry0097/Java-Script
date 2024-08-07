@@ -103,3 +103,17 @@ test1().then((r)=>{
     console.log(r)
 })
 
+/*
+fetch(file)
+.then(x => x.text())
+.then(y => myDisplay(y));
+This function is similar as: 
+*/
+
+async function getText(file) {
+  let myObject = await fetch(file);
+  let myText = myObject.text();
+  console.log(myText)
+}
+
+getText('https://jsonplaceholder.typicode.com/todos/1')
